@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+.navlinks{
+    display: flex;
+    column-gap: 50px;
+}
+
+.navlinks a{
+    color: black;
+    text-decoration: none;
+}
+
+.navbar h1{
+    font-family: "Qwitcher Grypen", cursive;
+    color: olive;
+}
+
+.navlinks a:hover{
+    color: olive;
+}
+.searchbar{
+    margin-top:50px;
+   
+}
+
+.searchbar input{
+    padding: 13px;
+    width: 450px;
+    margin-left: 25%;
+    text-align: center;
+}
+
+
+.searchbar button{
+  height: 43px;
+  width: 43px;
+  border-radius: 21px;
+}
+
+.searchbar .search{
+    color:black;
+    border: none;
+    background-color: transparent;
+}
+
+
+.productcontainer{
+    margin-top: 20px;
+    padding: 30px;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    flex-direction: row;
+    justify-content: center;
+    row-gap: 70px;
+    display: flex;
+}
+
+.productcontainer h1{
+    color: black;
+    font-size: medium;
+}
+
+.productcard{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius:10px;
+    padding: 10px ;
+}
+
+.pheading{
+    text-align: center;
+    color: olive;
+}
+
+.productcard button{
+    padding: 5px;
+    color: black;
+    background-color: teal;
+    border-radius:9px;
+}
+
+.productcard button:hover{
+    color: red;
+}
+
+
+#toggleButton{
+    display: none;
+}
+
+/* -------------sidenavbar----------------- */
+
+.sidenavbar {
+    background-color: olive;
+    width: 0;  /* Hidden by default */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    color: white;
+    transition: width 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.sidenavitems{
+    margin-bottom: 40px;
+}
+
+.sidenavitems a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.sidenavitems a:hover{
+    color: red;
+}
+
+.sidenavbar.open {
+    width: 50%; /* The width it should have when opened */
+    opacity: 1;  /* Full visibility */
+}
+
+
+
+/* ------------------------headrer-------------------------- */
+
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    gap: 50px;
+}
+
+
+.servicecontainer-1{
+    display: flex;
+    margin-left: 10px;
+    padding: 20px;
+}
+
+.line p{
+    text-align:center;
+}
+
+.servicecontainer-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 40px;
+}
+
+.servicecontainer-2 div{
+    background-color: bisque;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news input{
+    padding: 11px;
+    margin: solid 3px;
+    width: 80vw;
+    margin-bottom: 10px;
+}
+
+.news button{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+
+
+.footer{
+    margin-top: 20px;
+    padding: 50px;
+    background-color: olive;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+
+/* --------mediaquery--------- */
+
+@media  screen and (max-width:600px) {
+    #toggleButton{
+        display: block;
+    }
+    .navlinks{
+        display: none;
+    }
+    .searchbar input{
+        width: 200px;
+        padding: 5px;
+        
+        
+    }
+
+    .searchbar{
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    .productcontainer{
+        margin-top: 8px;
+        padding: 20px;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        flex-direction: row;
+        justify-content: center;
+        row-gap: 20px;
+        display: flex;
+    }
+    
+    .productcontainer h1{
+        color: black;
+        font-size: medium;
+    }
+    
+    .productcard{
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        border-radius:10px;
+        padding: 10px ;
+    }
+    
+    
+    
+    .productcard button{
+        padding: 5px;
+        color: black;
+        background-color: teal;
+        border-radius:9px;
+    }
+    
+
+    .headerimg{
+        display: none;
+    }
+
+
+    .pheading h1{
+        font-weight: 700;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        color: olive;
+    }
+
+    .servicecontainer-1{
+        display: none;
+    }
+
+    .servicecontainer-2{
+        flex-direction: column;
+    }
+    .footer{
+        padding: 15px;
+    }
+}
